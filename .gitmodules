@@ -13,3 +13,6 @@
 [submodule "bundle/repeat"]
 	path = bundle/repeat
 	url = https://github.com/tpope/vim-repeat.git
+[submodule "bundle/neocomplacahe-snippets-complete"]
+	path = bundle/neocomplacahe-snippets-complete
+	url = https://github.com/Shougo/neocomplcache-snippets-complete.git
