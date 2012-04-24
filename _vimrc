@@ -432,6 +432,17 @@ imap  <silent><expr><tab>  neocomplcache#sources#snippets_complete#expandable() 
 smap  <tab>  <right><plug>(neocomplcache_snippets_jump)
 inoremap <expr><c-e>     neocomplcache#complete_common_string()
 
+" Enable heavy omni completion.
+if !exists('g:neocomplcache_omni_patterns')
+  let g:neocomplcache_omni_patterns = {}
+endif
+let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
+"autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
+let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
+let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
+
+
 " function for snippets
 function Filename()
     return expand("%:t:r")
@@ -528,6 +539,7 @@ else
         set directory=/tmp,.        " Swap files
         set undodir=/tmp,.
     "elseif os == 'Linux'
+    endif
 endif
 
 
