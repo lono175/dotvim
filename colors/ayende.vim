@@ -2,7 +2,7 @@
 " Maintainer: Hai-Feng Kao <KHaiFeng@gmail.com>
 " Last Change: 2009/06/28
 " Info: based on ayende's visual studio setting 
-" Version: 1.0
+" Version: 1.0 
 
 set background=dark
 if version > 580

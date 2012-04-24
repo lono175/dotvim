@@ -1,7 +1,5 @@
 set nocompatible
 
-
-
 "------------------------------vimrc_example-------------------------------
 " An example for a vimrc file.
 "
@@ -15,9 +13,9 @@ set nocompatible
 "	    for OpenVMS:  sys$login:.vimrc
 
 " When started as "evim", evim.vim will already have done these settings.
-if v:progname =~? "evim"
-  finish
-endif
+"if v:progname =~? "evim"
+  "finish
+"endif
 
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
@@ -158,9 +156,6 @@ nmap <silent> gw "_yiw:s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<cr><c-o><c-l>:nohl
 "If you like Y to work from the cursor to the end of line (which is more logical, but not Vi-compatible)
 noremap Y y$
 
-"Maximize window when start
-"au Filetype cpp,c,cs,txt,viki,tex,m,rc,vim simalt ~x
-au GUIEnter * simalt ~x
 
 " restore the window
 "simalt ~r
@@ -381,9 +376,6 @@ au FileType tex setlocal spell spelllang=en
 "------------------------------vim-latex---------------------------------------
 
 "------------------------------unicode support---------------------------------------
-"set guifont=Consolas:h11:cSHIFTJIS
-"set guifont=*
-set guifont=Consolas:h11
 "set fileencodings=utf-8,big5,euc-jp,gbk,euc-kr,utf-bom,iso8859-1
 "set fileencodings = ascii, gbk, ucs-bom,utf-8,ucs-2,ucs-le,sjis,big5,latin1
 set encoding=utf-8
@@ -531,6 +523,14 @@ if has('win32') || has('win64')
     set path+=D:/OpenCV/include/opencv
     set path+=D:/boost/boost_1_42
 
+    "Maximize window when start
+    "au Filetype cpp,c,cs,txt,viki,tex,m,rc,vim simalt ~x
+    au GUIEnter * simalt ~x
+
+    "set guifont=Consolas:h11:cSHIFTJIS
+    "set guifont=*
+    set guifont=Consolas:h11
+
 "set tags+=D:\ctags57\boost-tags
 else
     let os=substitute(system('uname'), '\n', '', '')
@@ -538,6 +538,7 @@ else
         set backupdir=/tmp,.        " Backup files
         set directory=/tmp,.        " Swap files
         set undodir=/tmp,.
+        set guifont=Consolas:h16
     "elseif os == 'Linux'
     endif
 endif
