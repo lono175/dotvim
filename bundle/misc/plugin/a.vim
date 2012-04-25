@@ -71,7 +71,8 @@ endfunction
 
 " Add all the default extensions
 " Mappings for C and C++
-call <SID>AddAlternateExtensionMapping('h',"c,cpp,cxx,cc,CC")
+call <SID>AddAlternateExtensionMapping('m',"h")
+call <SID>AddAlternateExtensionMapping('h',"c,cpp,cxx,cc,CC,m")
 call <SID>AddAlternateExtensionMapping('H',"C,CPP,CXX,CC")
 call <SID>AddAlternateExtensionMapping('hpp',"cpp,c")
 call <SID>AddAlternateExtensionMapping('HPP',"CPP,C")

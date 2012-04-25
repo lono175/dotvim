@@ -316,13 +316,12 @@ au FileType cs set foldlevelstart=99
 
 
 "------------------------------for matlab------------------------------------------
-au FileType matlab simalt ~x
-au FileType matlab source $VIMRUNTIME/macros/matchit.vim
-autocmd BufEnter *.m    compiler mlint
+"au FileType matlab simalt ~x
+"au FileType matlab source $VIMRUNTIME/macros/matchit.vim
+"autocmd BufEnter *.m    compiler mlint
 
 "------------------------------for objective-c------------------------------------------
 let filetype_m='objc'
-
 "------------------------------for python------------------------------------------
 "au FileType python let g:pydiction_location = 'D:/ctags/python_diction/complete-dict'
 
