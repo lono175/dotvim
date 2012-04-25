@@ -16,9 +16,9 @@
 [submodule "bundle/neocomplacahe-snippets-complete"]
 	path = bundle/neocomplacahe-snippets-complete
 	url = https://github.com/Shougo/neocomplcache-snippets-complete.git
-[submodule "cocoa.vim"]
-	path = cocoa.vim
-	url = https://github.com/msanders/cocoa.vim.git
 [submodule "bundle/cocoa"]
 	path = bundle/cocoa
 	url = https://github.com/msanders/cocoa.vim.git
+[submodule "bundle/neocomplcache-snippets-complete"]
+	path = bundle/neocomplcache-snippets-complete
+	url = https://github.com/Shougo/neocomplcache-snippets-complete.git
