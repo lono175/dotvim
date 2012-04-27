@@ -202,10 +202,6 @@ noremap <C-[> <C-t>
 inoremap <silent> <C-s> <ESC>:wa<CR> 
 nnoremap <silent> <C-s> :wa<CR>
 
-"save all files and rebuild tag file
-"need Sleep function to wait cs.py to rebuild cscope.out
-au FileType cpp,c,java inoremap <silent> <C-s> <ESC> :wa<CR>:cs kill 0<CR>:!start cmd /c  cs.py<CR>:Sleep 1000<CR>:cs add cscope.out<CR>
-au FileType cpp,c,java nnoremap <silent> <C-s> :wa<CR>:cs kill 0<CR>:!start cmd /c cs.py<CR>:Sleep 1000<CR>:cs add cscope.out<CR>
 
 "disable cscope for python
 au FileType python set nocst
@@ -530,7 +526,12 @@ if has('win32') || has('win64')
     "set guifont=*
     set guifont=Consolas:h11
 
-"set tags+=D:\ctags57\boost-tags
+    "save all files and rebuild tag file
+    "need Sleep function to wait cs.py to rebuild cscope.out
+    au FileType cpp,c,java inoremap <silent> <C-s> <ESC> :wa<CR>:cs kill 0<CR>:!start cmd /c  cs.py<CR>:Sleep 1000<CR>:cs add cscope.out<CR>
+    au FileType cpp,c,java nnoremap <silent> <C-s> :wa<CR>:cs kill 0<CR>:!start cmd /c cs.py<CR>:Sleep 1000<CR>:cs add cscope.out<CR>
+
+    "set tags+=D:\ctags57\boost-tags
 else
     let os=substitute(system('uname'), '\n', '', '')
     if os == 'Darwin' || os == 'Mac'
