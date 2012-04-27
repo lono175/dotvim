@@ -168,7 +168,7 @@ imap <MiddleMouse> <Nop>
 "This command simply overwrites the gf command to instead open the file under the cursor with the :edit command¡Xand if it does not exist, then open a new empty buffer
 "nmap gf :edit <cfile><CR>
 
-"for FuzzyFinder.vim
+"----------for fuzzy finder.vim---------
 "can I set default to open tabs??
 "break the original forward functionality
 "nmap ff :FuzzyFinderFile<CR> 
